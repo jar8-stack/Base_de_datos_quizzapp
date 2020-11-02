@@ -48,6 +48,13 @@ INSERT INTO question_answers(id, text, correct_answer) VALUES(1, '1983', 0);
 INSERT INTO question_answers(id, text, correct_answer) VALUES(1, '1989', 0);
 INSERT INTO question_answers(id, text, correct_answer) VALUES(1, '1981', 0);
 
+INSERT INTO questions(theme_id, text) VALUES(4, '¿Quien creo minecraft');
+
+INSERT INTO question_answers(id, text, correct_answer) VALUES(2, 'Notch', 1);
+INSERT INTO question_answers(id, text, correct_answer) VALUES(2, 'Cory barlock', 0);
+INSERT INTO question_answers(id, text, correct_answer) VALUES(2, 'El inge bolio', 0);
+INSERT INTO question_answers(id, text, correct_answer) VALUES(2, 'yo', 0);
+
 -- Consultas generales del juego 
 
 --Mostrar temas del juego 
@@ -60,4 +67,7 @@ SELECT text, correct_answer FROM question_answers WHERE id=1
 --Mostrar la respuesta correcta
 SELECT text, correct_answer FROM question_answers WHERE id=1 and correct_answer=1 
 
+
+--Mostrar preguntas por tema 
+SELECT * FROM questions WHERE theme_id=4;
 
