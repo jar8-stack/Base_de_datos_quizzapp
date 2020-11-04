@@ -46,22 +46,21 @@ CREATE TABLE [question_answers](
    [correct_answer] INTEGER NOT NULL
 );
 
-INSERT INTO [themes](description) VALUES('cine');
-INSERT INTO [themes](description) VALUES('fisica');
-INSERT INTO [themes](description) VALUES('Historia');
-INSERT INTO [themes](description) VALUES('Matematicas');
-INSERT INTO [themes](description) VALUES('Videojuegos');
-
 INSERT INTO [themes](description) VALUES('Arte');
+INSERT INTO [themes](description) VALUES('Historia');
+INSERT INTO [themes](description) VALUES('Ciencia');
+INSERT INTO [themes](description) VALUES('Programacion');
+INSERT INTO [themes](description) VALUES('Cine');
+INSERT INTO [themes](description) VALUES('Cultura');
 
-INSERT INTO questions(theme_id, text) VALUES(4, '¿En que año se publico supermario bros?');
+INSERT INTO questions(theme_id, text) VALUES(2, '¿En que año se publico supermario bros?');
 
 INSERT INTO question_answers(id, text, correct_answer) VALUES(1, '1985', 1);
 INSERT INTO question_answers(id, text, correct_answer) VALUES(1, '1983', 0);
 INSERT INTO question_answers(id, text, correct_answer) VALUES(1, '1989', 0);
 INSERT INTO question_answers(id, text, correct_answer) VALUES(1, '1981', 0);
 
-INSERT INTO questions(theme_id, text) VALUES(4, '¿Quien creo minecraft');
+INSERT INTO questions(theme_id, text) VALUES(2, '¿Quien creo minecraft');
 
 INSERT INTO question_answers(id, text, correct_answer) VALUES(2, 'Notch', 1);
 INSERT INTO question_answers(id, text, correct_answer) VALUES(2, 'Cory barlock', 0);
