@@ -14,7 +14,20 @@
 DROP TABLE IF EXISTS [question_answers];
 DROP TABLE IF EXISTS [questions];
 DROP TABLE IF EXISTS [themes];
+DROP TABLE IF EXISTS [configurations]; 
 
+CREATE TABLE [configurations](
+  [id_configuration] INTEGER PRIMARY KEY,
+  [number_min_question] INTEGER NOT NULL,
+  [number_max_question] INTEGER NOT NULL, 
+  [dificulty] TEXT NOT NULL,
+  [number_min_track] INTEGER NOT NULL,
+  [number_max_track] INTEGER NOT NULL,
+  [tracks_enabled] BOOLEAN NOT NULL);
+
+CREATE TABLE [configuration_themes](
+  [id_configuration] INTEGER REFERENCES [configurations](id_configuration), 
+   [id_theme] INTEGER REFERENCES [themes](id_theme));
 
 CREATE TABLE [themes](
   [id] INTEGER PRIMARY KEY AUTOINCREMENT, 
